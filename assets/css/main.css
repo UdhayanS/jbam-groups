@@ -802,7 +802,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
   padding: 120px 0 80px 0;
   display: flex;
@@ -896,6 +896,107 @@ section,
   }
 
   .hero p {
+    font-size: 18px;
+  }
+}
+
+
+/*----------------------------------------------------
+# Who we are
+------------------------------------------------------*/
+.who-we-are {
+  padding: 80px 0;
+  position: relative;
+  clip-path: inset(0);
+}
+
+.who-we-are img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.who-we-are:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.who-we-are .container {
+  position: relative;
+  z-index: 3;
+}
+
+.who-we-are h2 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  font-family: var(--nav-font);
+}
+
+.who-we-are h2 span {
+  color: var(--accent-color);
+}
+
+.who-we-are p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.who-we-are .icon-box {
+  padding: 30px 20px;
+  transition: ease-in-out 0.3s;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-we-are .icon-box i {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+.who-we-are .icon-box h3 {
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  line-height: 26px;
+  columns: var(--default-color);
+}
+
+.who-we-are .icon-box h3 a {
+  color: rgb(255, 255, 255);
+  transition: ease-in-out 0.3s;
+}
+
+.who-we-are .icon-box:hover {
+  border-color: var(--accent-color);
+}
+
+.who-we-are .icon-box:hover h3 a {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .who-we-are h2 {
+    font-size: 32px;
+  }
+
+  .who-we-are p {
     font-size: 18px;
   }
 }
@@ -1011,7 +1112,7 @@ section,
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 80px 20px;
+  padding: 40px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
 }
